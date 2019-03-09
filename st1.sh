@@ -128,3 +128,29 @@ for file in *
   cp -p "$file" "$file".bak
 }
 
+
+sum=0
+for ((i = 1; i <= 100; i++)) {
+  ((sum += i))
+}
+echo "$sum"
+
+for ((sum = 0, i = 1; i <= 100; i++)) {
+  ((sum += i))
+}
+echo $((sum))
+
+sum=0
+i=1
+while [ "$i" -le 100 ]
+do
+  sum=`expr "$sum" + "$i"`
+  i=`expr "$i" + 1`
+done
+echo "$sum"
+
+while [ $# -gt 0 ]
+do
+  cp -p "$1" "$1".bak
+  shift
+done
