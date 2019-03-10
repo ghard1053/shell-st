@@ -154,3 +154,22 @@ do
   cp -p "$1" "$1".bak
   shift
 done
+
+
+(
+  cd /some/dir
+  cp -p "$file" backup-"$file"
+)
+
+(
+  cd /some/dir
+  pwd
+  ls -l
+) > logfile
+
+{
+  uname -a
+  date
+  who
+} > logfile
+
