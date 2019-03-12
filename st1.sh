@@ -198,3 +198,23 @@ factorial()
 }
 
 factorial "$1"
+
+
+((i = 1))
+while ((i <= 10))
+do
+  echo "$i"
+  ((i++))
+done
+
+i=1
+while [ "$i" -le 10 ]
+do
+  echo "$i"
+  i= `expr "$i" + 1`
+done
+
+if [[ "$i" -le 3 ]]
+then
+  echo 'i <= 3'
+fi
