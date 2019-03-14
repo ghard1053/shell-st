@@ -22,3 +22,9 @@ TEST_VAL=
 ./src_test
 echo "$TEST_VAL" # 
 
+source file
+
+
+eval echo \"\$$var\"
+
+exec myprog
