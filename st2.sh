@@ -84,3 +84,25 @@ do
   shift
 done
 
+i=123
+printf 'sum %d\n' "$1"
+
+dir=`pwd`
+echo "$dir"
+
+if [ "$i" -le 3 ]
+then
+  echo 'i <= 3'
+fi
+
+if [ $# -lt 1 ]; then
+  exit 1
+fi
+
+[ -f /some/dir/file ]
+echo $?
+
+cmp -s file1 file2
+status=$?
+echo 'compare'
+exit "$status"
